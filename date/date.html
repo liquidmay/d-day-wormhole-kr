@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+    }
+    h1 {
+      font-style: italic;
+      text-align: center;
+    }
+    h3 {
+      font-style: oblique;
+      text-align: center;
+    }
+    #update {
+      width: 100%;
+      display: block;
+    }
+  </style>
+  <body>
+    <h1>현재 날짜 확인</h1>
+    <h3 id="date"></h3>
+    <h1>현재 시간 확인</h1>
+    <h3 id="time"></h3>
+    <button class="update" id="update">시간 업데이트</button>
+
+    <script>
+      let currentDate = new Date();
+      let year = currentDate.getFullYear();
+      let month = currentDate.getMonth();
+      let day = currentDate.getDate();
+      let hour = currentDate.getHours();
+      let minutes = currentDate.getMinutes();
+      let seconds = currentDate.getSeconds();
+      let btn = document.getElementById("update");
+      let date = document.getElementById("date");
+      let time = document.getElementById("time");
+
+      date.innerText = `${year}년 ${month + 1}월 ${day}일`;
+      // script는 body 태그의 맨 아래에 위치하는 것이 좋다
+      time.innerText = `${hour}시 ${minutes}분 ${seconds}초`;
+
+      btn.onclick = function () {
+        let currentDate = new Date();
+        let year = currentDate.getFullYear();
+        let month = currentDate.getMonth();
+        let day = currentDate.getDate();
+        let hour = currentDate.getHours();
+        let minutes = currentDate.getMinutes();
+        let seconds = currentDate.getSeconds();
+        let btn = document.getElementById("update");
+        let date = document.getElementById("date");
+        let time = document.getElementById("time");
+
+        date.innerText = `${year}년 ${month + 1}월 ${day}일`;
+        time.innerText = `${hour}시 ${minutes}분 ${seconds}초`;
+      };
+    </script>
+  </body>
+</html>
